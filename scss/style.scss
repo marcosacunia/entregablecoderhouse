@@ -1,7 +1,6 @@
-html {
-    font-size:  62.5%;
-}
+ // imports
+ @import "./utilities/variables";
+@import "./utilities/condicionales";
 
-ul{
-    list-style: none
-}
+// import views
+@import "./views/home";
