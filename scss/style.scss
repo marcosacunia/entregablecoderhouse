@@ -1,6 +1,9 @@
- // imports
- @import "./utilities/variables";
+// imports
+@import "./utilities/variables";
+@import "./utilities/maps";
+@import "./utilities/mixin";
 @import "./utilities/condicionales";
 
-// import views
+
+
 @import "./views/home";
