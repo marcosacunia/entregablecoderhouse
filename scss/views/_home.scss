@@ -20,6 +20,7 @@ header {
 }
 
 // Estilos del navbar
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -298,12 +299,12 @@ header {
     .menu {
       ul {
         list-style: none;
-        padding: 0;
-        margin: 0;
+        padding: 45px;
+        margin: 2px;
         display: flex;
         overflow-x: auto;
         width: $menu-width;
-        white-space: nowrap;
+        white-space: normal;
     
         li {
           width: $item-width;
@@ -343,56 +344,29 @@ header {
     
     @include responsive-menu;
     // Productos carrusel
-    .carousel {
-      position: relative;
-      overflow: hidden;
-      width: $carousel-width;
-      height: $carousel-height;
-      
-      .carousel-container {
-        display: flex;
-        transition: transform $transition-duration ease-in-out;
-      }
-    
-      .carousel-slide {
-        display: flex;
-        width: 400%; // 4 imágenes en el carrusel
-        img {
-          width: 25%; // Una imagen visible a la vez
-          height: auto;
-          object-fit: cover;
-        }
-      }
-    
-      .carousel-control {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        border: none;
-        padding: 10px 15px;
-        cursor: pointer;
-        transition: background-color $transition-duration;
-        
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.8);
-        }
-      }
-    
-      .prev {
-        left: 0;
-      }
-    
-      .next {
-        right: 0;
-      }
-    }
-    
-    // Estilos para hacer el carrusel responsive
-    @media (max-width: 768px) {
-      .carousel {
-        height: 200px; // Ajusta el alto del carrusel en pantallas pequeñas
-      }
-    }
 
+
+.rounded2 { height: 100px;
+  width: 1640px;
+  text-align: center;
+  
+  }
+
+  .menu {
+    margin-top: 20px;
+  
+    .col-md-3, .col-sm-6 {
+      padding: 5px;
+  
+      img {
+        width: 100%;
+        border: 2px solid transparent;
+        transition: transform 0.3s ease-in-out;
+      }
+  
+      &:hover img {
+        transform: scale(1.1);
+        border: 2px solid #007bff;
+      }
+    }
+  }
