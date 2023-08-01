@@ -78,7 +78,7 @@ header {
     }
   }
   
-  /* Estilos para el navbar responsive */
+  
   @media (max-width: 768px) {
     .navbar.open {
       display: flex;
@@ -94,57 +94,56 @@ header {
 
 
 // Formulario
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 400px;
+ .form {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     max-width: 400px;
     margin: 0 auto;
-    padding: 20px;
-    text-decoration: #000000;
+     padding: 20px;
+     text-decoration: #000000;
   
     label {
-      font-weight: bold;
-      margin-bottom: 5px;
+     font-weight: bold;
+       margin-bottom: 5px;
     }
   
-    input,
+     input,
     textarea {
     
       width: 100%;
       padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #000000;
-      border-radius: 5px;
-      transition: border-color 0.3s;
+       margin-bottom: 15px;
+       border: 1px solid #000000;
+   border-radius: 5px;
+       transition: border-color 0.3s;
   
       &:focus {
         border-color: #007bff;
         outline: none;
       }
-    }
+     }
   
     button {
-      background-color: #007bff;
-      color: #ffffff;
-      border: none;
+       background-color: #007bff;
+       color: #ffffff;
+       border: none;
       padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
+       border-radius: 5px;
+       cursor: pointer;
+       transition: background-color 0.3s;
   
-      &:hover {
-        background-color: #0056b3;
+       &:hover {
+         background-color: #0056b3;
       }
-    }
-  }
+     }
+   }
   
-  // Estilos responsivos
-  @media (max-width: 768px) {
-    .form {
+   // Estilos responsivos
+   @media (max-width: 768px) {
+     .form {
       max-width: 90%;
-    }
-  }
+    }   }
 
 // fin formulario
 // index welcome
@@ -182,7 +181,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
   
     h2 {
@@ -317,7 +316,7 @@ header {
       }
     }
     
-    // Mixin para hacer el menú responsive
+    
     @mixin responsive-menu {
       @media (max-width: 768px) {
         .menu {
@@ -343,7 +342,7 @@ header {
     
     
     @include responsive-menu;
-    // Productos carrusel
+    
 
 
 .rounded2 { height: 100px;
@@ -370,3 +369,64 @@ header {
       }
     }
   }
+  
+// carrusel
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); 
+  }
+}
+
+
+
+.carousel {
+  @extend %carousel;
+}
+
+.carousel-slide {
+  @extend %carousel-slide;
+}
+
+
+
+.carousel {
+  .carousel-slide {
+    animation: slideAnimation 10s infinite;
+    @include carouselTransition(10s);
+  }
+}
+
+
+
+.carousel:hover .carousel-slide {
+  animation-play-state: paused;
+}
+
+
+@mixin responsiveCarousel($width) {
+  @media (max-width: $width) {
+    .carousel {
+      max-width: 100%;
+    }
+  }
+}
+
+@include responsiveCarousel(768px);
+@include responsiveCarousel(480px);
+
+// index 
+
+.custom-text {
+  font-size: 24px; /* Tamaño de fuente personalizado */
+  line-height: 1.6; /* Espaciado entre líneas */
+  color: #333; /* Color de texto personalizado */
+  margin-bottom: 20px; /* Espaciado inferior entre párrafos */
+}
+
+.custom-text strong {
+  font-weight: 700; /* Texto en negrita */
+}

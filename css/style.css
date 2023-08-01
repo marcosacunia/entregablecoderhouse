@@ -1,4 +1,27 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap);
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-slide img {
+  max-width: 90%;
+  max-height: 90%;
+  display: block;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -72,7 +95,6 @@ header {
   background-color: #fff;
 }
 
-/* Estilos para el navbar responsive */
 @media (max-width: 768px) {
   .navbar.open {
     display: flex;
@@ -155,7 +177,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 .welcome-section h2 {
@@ -299,6 +321,44 @@ header {
 .menu .col-md-3:hover img, .menu .col-sm-6:hover img {
   transform: scale(1.1);
   border: 2px solid #007bff;
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.carousel .carousel-slide {
+  animation: slideAnimation 10s infinite;
+  transition: transform 10s ease-in-out;
+}
+
+.carousel:hover .carousel-slide {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .carousel {
+    max-width: 100%;
+  }
+}
+.custom-text {
+  font-size: 24px; /* Tamaño de fuente personalizado */
+  line-height: 1.6; /* Espaciado entre líneas */
+  color: #333; /* Color de texto personalizado */
+  margin-bottom: 20px; /* Espaciado inferior entre párrafos */
+}
+
+.custom-text strong {
+  font-weight: 700; /* Texto en negrita */
 }
 
 /*# sourceMappingURL=style.css.map */

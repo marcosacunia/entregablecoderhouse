@@ -35,21 +35,24 @@
     <section class="contact-form-section">
       <h2>Contacto</h2>
       <p>¿Tienes alguna pregunta o comentario? ¡Estamos aquí para ayudarte!</p>
-      <form class="contact-form">
-        <input type="text" placeholder="Nombre" required />
-        <input type="email" placeholder="Correo electrónico" required />
-        <textarea placeholder="Mensaje" required></textarea>
-        <button type="submit">Enviar mensaje</button>
-      </form>
-    </section>
+
+<p>
+  Estamos emocionados de escucharte. Por favor, completa el siguiente formulario con la información requerida para que podamos brindarte la mejor atención posible. Tus comentarios son extremadamente valiosos para nosotros y nos ayudarán a mejorar nuestros servicios. Si tienes alguna pregunta o inquietud, no dudes en contactarnos. ¡Gracias por tomarte el tiempo para compartir tus pensamientos con nosotros!
+
+
+  <div class="container">
+    <form class="contact-form">
+      
+      <input type="text" name="name" placeholder="Nombre">
+      <input type="email" name="email" placeholder="Correo Electrónico">
+      <textarea name="message" placeholder="Mensaje"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
 
     <!-- Pie De Pagina -->
     <footer class="text-center text-muted py-3">
-      <img
-        src="../img/nuestros-clientes.jpg"
-        class="rounded2 mx-auto d-block"
-        alt="nuestros clientes"
-      />
+      
       <div class="container">
         <p class="mb-2">Síguenos en redes sociales:</p>
         <ul class="list-inline mb-0">
@@ -80,5 +83,18 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".footer-image").hover(function() {
+          $(this).addClass("hover-animation");
+        }, function() {
+          $(this).removeClass("hover-animation");
+        });
+      });
+    </script>
+  
   </body>
+
 </html>

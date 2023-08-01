@@ -14,6 +14,8 @@
   </head>
   <body>
     <!--  NAVBAR -->
+
+
     <header>
       <nav class="navbar">
         <div class="navbar__logo">
@@ -31,6 +33,8 @@
       </nav>
     </header>
 
+
+
     <section class="welcome-section">
       <h2>Bienvenido a Nuestra Empresa de Distribución</h2>
       <p>
@@ -47,59 +51,33 @@
         <img src="img/lomalogo.png" alt="logo" class="logoindex" />
       </center>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <h2 class="text-center my-5 intro-text">Bienvenidos</h2>
-          <div class="container text-center mt-5">
-            <!-- <img src="img/lomalogo.png" class="logo" alt="Logo"> -->
-          </div>
+<!-- carrusel -->
+<div class="carousel">
+  <div class="carousel-slide">
+    <img src="./img/yamani.jpg" alt="Imagen 1">
+  </div>
+  <div class="carousel-slide">
+    <img src="./img/couscous.jpg" alt="Imagen 2">
+  </div>
+  <div class="carousel-slide">
+    <img src="./img/guisolentejas.jpg" alt="Imagen 3">
+  </div>
+</div>
 
-          <p class="intro-text">
-            Somos una empresa dedicada a la distribución de productos de alta
-            calidad en la región. Nuestro compromiso es proporcionar soluciones
-            eficientes y confiables para satisfacer las necesidades de nuestros
-            clientes.
-          </p>
-
-          <p class="intro-text">
-            En Loma Distribución, nos enfocamos en establecer relaciones sólidas
-            y duraderas con nuestros proveedores y clientes. Trabajamos en
-            estrecha colaboración con ellos para entender sus requerimientos y
-            ofrecerles las mejores opciones de distribución.
-          </p>
-          <p class="intro-text">
-            Nuestro equipo altamente capacitado y comprometido se encarga de
-            asegurar que los productos sean entregados de manera oportuna y en
-            las mejores condiciones. Nos esforzamos por mantener altos
-            estándares de calidad en todas nuestras operaciones.
-          </p>
-          <p class="intro-text">
-            Estamos orgullosos de ser una empresa confiable y responsable,
-            brindando un servicio excepcional y adaptándonos a las necesidades
-            cambiantes del mercado. ¡Nos encantaría ser su socio de confianza en
-            el ámbito de la distribución!
-          </p>
-          <p class="intro-text">
-            No dude en contactarnos para obtener más información sobre nuestros
-            servicios y cómo podemos ayudarlo a alcanzar sus objetivos de
-            distribución de manera eficiente y efectiva.
-          </p>
-          <p class="intro-text">
-            ¡Gracias por considerar a Loma Distribución como su opción
-            preferida!
-          </p>
-        </div>
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p class="custom-text"><strong>Somos una empresa dedicada a la distribución de productos de alta calidad en la región. Nuestro compromiso es proporcionar soluciones eficientes y confiables para satisfacer las necesidades de nuestros clientes.</strong></p>
+      <p class="custom-text"><strong>En Loma Distribución, nos enfocamos en establecer relaciones sólidas y duraderas con nuestros proveedores y clientes. Trabajamos en estrecha colaboración con ellos para entender sus requerimientos y ofrecerles las mejores opciones de distribución.</strong></p>
+      <p class="custom-text"><strong>Nuestro equipo altamente capacitado y comprometido se encarga de asegurar que los productos sean entregados de manera oportuna y en las mejores condiciones. Nos esforzamos por mantener altos estándares de calidad en todas nuestras operaciones.</strong></p>
+      <p class="custom-text"><strong>Estamos orgullosos de ser una empresa confiable y responsable, brindando un servicio excepcional y adaptándonos a las necesidades cambiantes del mercado. ¡Nos encantaría ser su socio de confianza en el ámbito de la distribución!</strong></p>
+      <p class="custom-text"><strong>No dude en contactarnos para obtener más información sobre nuestros servicios y cómo podemos ayudarlo a alcanzar sus objetivos de distribución de manera eficiente y efectiva. ¡Gracias por considerar a Loma Distribución como su opción preferida!</strong></p>
     </div>
+  </div>
+</div>
 
     <!-- Pie De Pagina -->
     <footer class="text-center text-muted py-3">
-      <img
-        src="img/nuestros-clientes.jpg"
-        class="rounded2 mx-auto d-block"
-        alt="nuestros clientes"
-      />
       <div class="container">
         <p class="mb-2">Síguenos en redes sociales:</p>
         <ul class="list-inline mb-0">
@@ -130,5 +108,17 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".footer-image").hover(function() {
+          $(this).addClass("hover-animation");
+        }, function() {
+          $(this).removeClass("hover-animation");
+        });
+      });
+    </script>
+  
+  
   </body>
 </html>

@@ -1,0 +1,9 @@
+@mixin centerElement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin carouselTransition($duration) {
+    transition: transform $duration ease-in-out;
+  }
