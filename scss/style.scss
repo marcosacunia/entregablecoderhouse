@@ -5,12 +5,12 @@
 @import "./utilities/mixin";
 @import "./utilities/extends";
 @import "./utilities/maps";
-@import "./utilities/formulario";
-@import "./utilities/productos";
 @import "./utilities/index";
 @import "./utilities/navbar";
+@import "./utilities/productos";
+@import "./utilities/formulario";
 @import "./utilities/condicionales";
 
 
 
-@import "./views/home";
+@import "./views/style.scss";
