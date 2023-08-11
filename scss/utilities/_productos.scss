@@ -1,0 +1,77 @@
+    // Productos
+
+    .menu {
+        ul {
+          list-style: none;
+          padding: 45px;
+          margin: 2px;
+          display: flex;
+          overflow-x: auto;
+          width: $menu-width;
+          white-space: normal;
+      
+          li {
+            width: $item-width;
+            img {
+              width: 100%;
+              height: auto;
+              display: block;
+            }
+          }
+        }
+      }
+      
+      
+      @mixin responsive-menu {
+        @media (max-width: 768px) {
+          .menu {
+            ul {
+              width: 100%;
+              li {
+                width: 25%; 
+              }
+            }
+          }
+        }
+      
+        @media (max-width: 480px) {
+          .menu {
+            ul {
+              li {
+                width: 50%; 
+              }
+            }
+          }
+        }
+      }
+      
+      
+      @include responsive-menu;
+      
+  
+  
+  .rounded2 { height: 100px;
+    width: 1640px;
+    text-align: center;
+    
+    }
+  
+    .menu {
+      margin-top: 20px;
+    
+      .col-md-3, .col-sm-6 {
+        padding: 5px;
+    
+        img {
+          width: 100%;
+          border: 2px solid transparent;
+          transition: transform 0.3s ease-in-out;
+        }
+    
+        &:hover img {
+          transform: scale(1.1);
+          border: 2px solid #007bff;
+        }
+      }
+    }
+    
